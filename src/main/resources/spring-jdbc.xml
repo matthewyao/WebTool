@@ -9,7 +9,8 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- Scans within the base package of the application for @Component classes to configure as beans -->
-    <context:component-scan base-package="*" />
+    <context:annotation-config/>
+    <context:component-scan base-package="com.matthewyao.dao" />
 
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="${jdbc.driver}"/>

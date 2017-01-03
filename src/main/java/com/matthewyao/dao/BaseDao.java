@@ -1,9 +1,9 @@
 package com.matthewyao.dao;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-import javax.annotation.Resource;
 import javax.sql.DataSource;
 
 /**
@@ -11,9 +11,10 @@ import javax.sql.DataSource;
  */
 public class BaseDao {
 
-    public JdbcTemplate jdbcTemplate;
+    protected JdbcTemplate jdbcTemplate;
 
-    @Qualifier("datasource")
+    @Autowired
+    @Qualifier("dataSource")
     public void setDatasource(DataSource datasource){
         this.jdbcTemplate = new JdbcTemplate(datasource);
     }
