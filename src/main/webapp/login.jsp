@@ -9,14 +9,17 @@
 <html>
 <head>
     <title>登录</title>
+    <script src="static/css/jquery-1.10.2.min.js"></script>
 </head>
 <body>
-用户名：<input type="text" id="username" name="username" />
-密码：<input type="text" id="password" name="password"/>
-<button id="login">登录</button>
+<form id="loginForm" action="/user/register">
+    用户名：<input type="text" id="username" name="username" />
+    密码：<input type="text" id="password" name="password"/>
+    <button id="login">登录</button>
+</form>
 <script type="text/javascript">
     $("#login").click(function () {
-        alert($("#username").val()+"登录了");
+        $("#loginform").submit();
     });
 </script>
 </body>
