@@ -17,4 +17,9 @@ public class UserSerivce {
     public void register(User user){
         this.userDao.addUser(user);
     }
+
+
+    public boolean login(User user){
+        this.userDao.login(user);
+    }
 }

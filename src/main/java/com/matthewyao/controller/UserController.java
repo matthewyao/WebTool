@@ -22,4 +22,9 @@ public class UserController {
     public void register(User user){
         this.userSerivce.register(user);
     }
+
+    @RequestMapping(value = "/login",method = RequestMethod.GET)
+    public void login(User user){
+        boolean success = this.userSerivce.login(user);
+    }
 }

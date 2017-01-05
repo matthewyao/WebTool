@@ -43,4 +43,13 @@ public class UserDao extends BaseDao {
         SqlRowSet rs = this.namedParameterJdbcTemplate.queryForRowSet(sql,params);
         return rs.next();
     }
+
+    public boolean login(User user){
+        String sql = "SELECT * web_user WHERE user_name=:username and user_password=:password)";
+        MapSqlParameterSource params = new MapSqlParameterSource();
+        params.addValue("username",user.getUsername());
+        params.addValue("password",user.getPassword());
+        SqlRowSet rs = this.namedParameterJdbcTemplate.queryForRowSet(sql,params);
+        return rs.next();
+    }
 }
