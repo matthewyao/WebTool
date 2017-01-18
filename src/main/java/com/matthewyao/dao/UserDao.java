@@ -45,7 +45,7 @@ public class UserDao extends BaseDao {
     }
 
     public boolean login(User user){
-        String sql = "SELECT * web_user WHERE user_name=:username and user_password=:password)";
+        String sql = "SELECT * FROM web_user WHERE user_name=:username and user_password=:password";
         MapSqlParameterSource params = new MapSqlParameterSource();
         params.addValue("username",user.getUsername());
         params.addValue("password",user.getPassword());

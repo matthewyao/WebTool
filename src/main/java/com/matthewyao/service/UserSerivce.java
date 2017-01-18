@@ -20,6 +20,6 @@ public class UserSerivce {
 
 
     public boolean login(User user){
-        this.userDao.login(user);
+        return this.userDao.login(user);
     }
 }

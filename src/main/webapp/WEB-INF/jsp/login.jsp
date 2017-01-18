@@ -9,12 +9,12 @@
 <html>
 <head>
     <title>登录</title>
-    <script src="static/css/jquery-1.10.2.min.js"></script>
+    <script src="../../static/css/jquery-1.10.2.min.js"></script>
 </head>
 <body>
-<form id="loginForm" action="/user/register">
-    用户名：<input type="text" id="username" name="username" />
-    密码：<input type="text" id="password" name="password"/>
+<form id="loginForm" action="/user/login" method="post">
+    用户名：<input type="text" id="username" name="username" /><br/><br/>
+    密码：<input type="password" id="password" name="password"/><br/><br/>
     <button id="login">登录</button>
 </form>
 <script type="text/javascript">
