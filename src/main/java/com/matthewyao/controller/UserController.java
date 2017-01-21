@@ -31,6 +31,7 @@ public class UserController {
         return mv;
     }
 
+    //TODO:使用极验验证加强安全性
     @RequestMapping(value = "/login",method = RequestMethod.POST)
     public ModelAndView doLogin(User user){
         ModelAndView mv = new ModelAndView();
